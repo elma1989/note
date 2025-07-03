@@ -29,3 +29,59 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+header, section {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    height: 14dvh;
+}
+main {
+    height: auto;
+    min-height: 86dvh;
+}
+
+
+.content {
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 clamp(64px, 11dvw, 160px);
+}
+
+form {
+    width: 500px;
+    .formdata {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        input[type=text] {
+            width: 100%;
+            height: 3rem;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 3px solid #0000c0;
+            width: 100%;
+            font: 2.4rem EduQLDHand;
+            color: #0000c0;
+            margin-left: 16px;
+        }
+    }
+    .formsubmit {
+        justify-content: flex-end;
+        align-items: center;
+        input[type=submit] {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            padding: 8px 16px;
+            background: #c00000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
