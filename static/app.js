@@ -1,3 +1,5 @@
+import { getSingleNote } from "./templates.js";
+
 let notes = [];
 
 function loadStorage() {
@@ -24,7 +26,17 @@ function init() {
         getUserInput();
     });
     loadStorage();
-    console.log(notes);
+    renderNotes();
+}
+
+function renderNotes() {
+    const refUls = document.querySelectorAll('ul');
+    refUls.forEach(ul => {
+        ul.innerHTML = '';
+    });
+    notes.forEach(note => {
+        refUls[0].innerHTML += getSingleNote(note.noteName, note.noteContent);
+    })
 }
 
 init();
