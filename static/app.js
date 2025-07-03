@@ -1,5 +1,10 @@
 let notes = [];
 
+function loadStorage() {
+    const storeNotes = JSON.parse(localStorage.getItem('notes'));
+    if (storeNotes != null) notes = storeNotes;
+}
+
 function saveStorage() {
     localStorage.setItem('notes', JSON.stringify(notes));
 }
@@ -17,7 +22,9 @@ function init() {
     document.forms[0].addEventListener('submit', (e) => {
         e.preventDefault();
         getUserInput();
-    })
+    });
+    loadStorage();
+    console.log(notes);
 }
 
 init();

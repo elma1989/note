@@ -43,6 +43,15 @@ main {
     min-height: 86dvh;
 }
 
+h1 {
+    font-size: 4.8rem;
+    text-align: center;
+    text-decoration: underline 8px solid #0000c0;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
 
 .content {
     width: 100%;
