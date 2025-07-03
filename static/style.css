@@ -1,3 +1,14 @@
+@font-face {
+    font-family: EduQLDHand;
+    src: url(../assets/fonts/EduQLDHand-Regular.ttf);
+}
+
+@font-face {
+    font-family: EduQLDHand;
+    src: url(../assets/fonts/EduQLDHand-Bold.ttf);
+    font-weight: bold;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,4 +16,16 @@
     scroll-behavior: smooth;
     text-decoration: none;
     position: relative;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 2.4rem EduQLDHand;
+    color: #0000c0;
+    background: url(../assets/img/roll_bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
