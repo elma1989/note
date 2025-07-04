@@ -1,3 +1,4 @@
+/* #region global */
 @import 'note.css';
 
 @font-face {
@@ -60,7 +61,7 @@ h2 {
     max-width: 1920px;
     padding: 0 clamp(64px, 11dvw, 160px);
 }
-
+/* #endregion */
 form {
     width: 500px;
     .formdata {
