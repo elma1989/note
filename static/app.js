@@ -94,6 +94,12 @@ function addAllEventlisteners() {
             eraseNote(noteIndex);
         });
     });
+    // recycle Note
+    document.querySelectorAll('.recycle-notes').forEach((note, noteIndex) => {
+        note.addEventListener('click', () => {
+            recycleNote(noteIndex);
+        });
+    });
 }
 // #endregion
 // #region NoteOptions
@@ -127,6 +133,13 @@ function trashArchiveNote(noteIndex) {
 
 function eraseNote(noteIndex) {
     trashes.splice(noteIndex, 1);
+    saveStorage();
+    renderNotes();
+}
+
+function recycleNote(noteIndex) {
+    const recycledNotes = trashes.splice(noteIndex, 1);
+    notes.push(recycledNotes[0]);
     saveStorage();
     renderNotes();
 }
