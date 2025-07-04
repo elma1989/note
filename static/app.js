@@ -82,6 +82,12 @@ function addAllEventlisteners() {
             trashNote(noteIndex);
         });
     });
+    // trash archived Note
+    document.querySelectorAll('.archive-del').forEach((note, noteIndex) => {
+        note.addEventListener('click', () => {
+            trashArchiveNote(noteIndex);
+        });
+    });
 }
 // #endregion
 // #region NoteOptions
@@ -101,6 +107,13 @@ function unarchiveNote(noteIndex) {
 
 function trashNote(noteIndex) {
     const trashedNotes = notes.splice(noteIndex, 1);
+    trashes.push(trashedNotes[0]);
+    saveStorage();
+    renderNotes();
+}
+
+function trashArchiveNote(noteIndex) {
+    const trashedNotes = archive.splice(noteIndex, 1);
     trashes.push(trashedNotes[0]);
     saveStorage();
     renderNotes();
