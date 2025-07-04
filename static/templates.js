@@ -23,6 +23,7 @@ export function getSingleTrashNote(name, content) {
         <li>
             ${name} - ${content}
             <button class="notes-btn trashed-notes del-del"><img src="assets/icons/trash_blue.svg"></button>
+            <button class="notes-btn recycle-notes"><img src="assets/icons/recycle_blue.svg"></button>
         </li>
     `
 }

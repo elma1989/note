@@ -41,3 +41,9 @@ ul {
         content: url(../assets//icons/trash_red.svg);
     }
 }
+
+.recycle-notes {
+    img:hover {
+        content: url(../assets/icons/recycle_red.svg);
+    }
+}
